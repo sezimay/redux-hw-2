@@ -1,11 +1,20 @@
-import React,{useState} from 'react'
-import TimerComp from '../TimerComp'
-const App = () => {
-  const [bool,setBool] = useState(true)
-  return (
-    <div>{bool ?<TimerComp/> :<div>Компонент уничтожен</div>}
-    <button onClick={()=>{setBool(bool? false:true)}} >Toggle</button></div>
-  )
-}
+import React, { useState } from "react";
+import TimerDop from "../Toogle";
 
-export default App
+const App = () => {
+  const [clear, setClear] = useState(true);
+  return (
+    <div>
+      {clear ? <TimerDop /> : <b style={{marginRight: "10px"}}>component cleared</b>}
+      <button
+        style={{alignItems: "center", width: "80px", border: "1px solid black" }}
+        onClick={() => {
+          setClear(clear ? false : true);
+        }}>
+        toogle
+      </button>
+    </div>
+  );
+};
+
+export default App;
