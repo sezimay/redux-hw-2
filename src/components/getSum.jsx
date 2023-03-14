@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import RenderPost from "./RenderPost";
+import RenderPost from "./posters";
 
-function TimerShow() {
+function Response() {
   const [data, setData] = useState([]);
   const random = Math.random() * 100;
 
@@ -26,4 +26,4 @@ function TimerShow() {
   return <RenderPost data={data} />;
 }
 
-export default TimerShow;
+export default Response;

@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-import TimerDop from "../Toogle";
+import TimerDop from "../getSum";
 
 const App = () => {
-  const [clear, setClear] = useState(true);
+  const [delet, setDelet] = useState(true);
   return (
     <div>
-      {clear ? <TimerDop /> : <b style={{marginRight: "10px"}}>component cleared</b>}
+      {delet ? (
+        <TimerDop />
+      ) : (
+        <b style={{ marginRight: "10px" }}>Компанент очистился</b>
+      )}
       <button
-        style={{alignItems: "center", width: "80px", border: "1px solid black" }}
+        style={{
+          alignItems: "center",
+          width: "180px",
+          border: "1px solid pink",
+        }}
         onClick={() => {
-          setClear(clear ? false : true);
-        }}>
-        toogle
+          setDelet(delet ? false : true);
+        }}
+      >
+        Toogle
       </button>
     </div>
   );
